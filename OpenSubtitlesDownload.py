@@ -502,6 +502,9 @@ parser.add_argument('-s', '--search', help="Search mode: hash, filename, hash_th
 parser.add_argument('-t', '--select', help="Selection mode: manual, default, auto")
 parser.add_argument('-a', '--auto', help="Trigger automatic selection and download of the best subtitles found", action='store_true')
 parser.add_argument('-o', '--output', help="Override subtitles download path, instead of next their video file")
+###
+parser.add_argument('-u', '--username', help="Set opensubtitles.org username")
+parser.add_argument('-p', '--password', help="Set opensubtitles.org password")
 
 parser.add_argument('filePathListArg', help="The video file(s) for which subtitles should be searched and downloaded", nargs='+')
 
@@ -530,6 +533,11 @@ if len(sys.argv) > 1:
             opt_selection_language = 'on'
             if opt_language_suffix != 'off':
                 opt_language_suffix = 'on'
+    ###
+    if result.username:
+        if result.password:
+            osd_username = result.username
+            osd_password = result.password
 
 # GUI auto detection
 if opt_gui == 'auto':
