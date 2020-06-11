@@ -618,6 +618,9 @@ for videoPathDispatch in videoPathList:
         for resultlangs in opt_languages:
             command.append("-l")
             command.append(resultlangs)
+            
+    if not opt_search_overwrite:
+        command.append("--skip")
 
     command.append(videoPathDispatch)
 
