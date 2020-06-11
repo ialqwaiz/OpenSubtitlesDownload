@@ -73,7 +73,8 @@ opt_languages = ['eng']
 
 # Write 2-letter language code (ex: _en) at the end of the subtitles file. 'on', 'off' or 'auto'.
 # If you are regularly searching for several language at once, you sould use 'on'.
-opt_language_suffix = 'auto'
+###opt_language_suffix = 'auto'
+opt_language_suffix = 'off'
 opt_language_separator = '_'
 
 # Force downloading and storing UTF-8 encoded subtitles files.
@@ -618,7 +619,8 @@ for videoPathDispatch in videoPathList:
         for resultlangs in opt_languages:
             command.append("-l")
             command.append(resultlangs)
-            
+    
+    ###
     if not opt_search_overwrite:
         command.append("--skip")
 
