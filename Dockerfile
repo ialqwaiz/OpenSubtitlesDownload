@@ -3,7 +3,8 @@ FROM arm32v7/python
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends cron
 
-RUN wget https://raw.githubusercontent.com/emericg/OpenSubtitlesDownload/master/OpenSubtitlesDownload.py
+#RUN wget https://raw.githubusercontent.com/emericg/OpenSubtitlesDownload/master/OpenSubtitlesDownload.py
+ADD OpenSubtitlesDownload.py
 RUN mv OpenSubtitlesDownload.py /usr/local/bin/osd
 RUN chmod +x /usr/local/bin/osd
 
