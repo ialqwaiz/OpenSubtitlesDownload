@@ -16,6 +16,6 @@ ENV OSD_USERNAME=''
 ENV OSD_PASSWORD=''
 
 VOLUME /media
-VOLUME /tmp
+#VOLUME /tmp
 
 ENTRYPOINT ["/entrypoint.sh"]
