@@ -1,3 +1,5 @@
+> $ alias osd='osd -a --cli --skip -l ara'
+
 OpenSubtitlesDownload.py
 ========================
 
